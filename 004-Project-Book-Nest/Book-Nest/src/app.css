@@ -1,0 +1,54 @@
+:root {
+    --ink: #2b2118;
+    --muted: #7a6f63;
+    --paper: #fbf7f0;
+    --accent: #b5562d;
+    font-family: Georgia, serif;
+    color: var(--ink);
+    background: var(--paper);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 32px 24px;
+}
+
+h1 {
+    margin-bottom: 24px;
+}
+
+form {
+    display: grid;
+    gap: 12px;
+    max-width: 480px;
+}
+
+label {
+    display: grid;
+    gap: 4px;
+}
+
+input,
+select,
+button {
+    font: inherit;
+    padding: 8px 10px;
+}
+
+button {
+    justify-self: start;
+    border: 0;
+    background: var(--ink);
+    color: var(--paper);
+    cursor: pointer;
+}
+
+.error {
+    color: var(--accent);
+}

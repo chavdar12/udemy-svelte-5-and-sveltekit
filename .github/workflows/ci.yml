@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7 # ci.sh and some SETUP scripts use node
+        with:
+          node-version: 24
+      - run: bash ci.sh format prettier
+      - run: bash ci.sh build node

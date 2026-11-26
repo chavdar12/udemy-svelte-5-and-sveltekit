@@ -1,0 +1,5 @@
+# Toolchains this repo needs, at the versions CI uses (.github/workflows/ci.yml).
+#   curl https://mise.run | sh   # or: brew install mise
+#   mise install                 # then work as in the README
+[tools]
+node = "24"
